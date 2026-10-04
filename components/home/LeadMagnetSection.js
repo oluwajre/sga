@@ -1,4 +1,5 @@
 import LeadMagnetForm from "@/components/forms/LeadMagnetForm";
+import { Suspense } from "react";
 
 export default function LeadMagnetSection() {
   return (
@@ -80,7 +81,9 @@ export default function LeadMagnetSection() {
                 </div>
 
                 <div className="mt-6">
-                <LeadMagnetForm />
+                  <Suspense fallback={null}>
+                    <LeadMagnetForm />
+                  </Suspense>
                 </div>
             </div>
          </div>
