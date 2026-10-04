@@ -18,10 +18,10 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
 
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
     },
+    "ignoreDeprecations": "6.0",
 
     "plugins": [
       {
