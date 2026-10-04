@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sga-navy: #0a192f;
+
+  --color-sga-emerald: #059669;
+  --color-sga-emerald-light: #10b981;
+
+  --color-sga-amber: #f59e0b;
+  --color-sga-amber-dark: #d97706;
+
+  --color-sga-background: #f8fafc;
+  --color-sga-white: #ffffff;
+
+  --color-sga-slate: #1e293b;
+  --color-sga-muted: #64748b;
+
+  --font-sga-heading: var(--font-jakarta);
+  --font-sga-body: var(--font-inter);
+
+  --shadow-sga-card: 0 4px 20px -2px rgb(10 25 47 / 8%);
+
+  --radius-sga: 10px;
+}
+
+:root {
+  --background: #f8fafc;
+  --foreground: #1e293b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes grow-bar {
+  from {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+
+  to {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+}
+
+.animate-grow-bar {
+  animation: grow-bar 800ms ease-out both;
+}
+
+.animate-grow-bar-delay-1 {
+  animation: grow-bar 800ms 150ms ease-out both;
+}
+
+.animate-grow-bar-delay-2 {
+  animation: grow-bar 800ms 300ms ease-out both;
+}
+
+.animate-grow-bar-delay-3 {
+  animation: grow-bar 800ms 450ms ease-out both;
+}
+
+@keyframes growth-arrow {
+  from {
+    opacity: 0;
+    transform: translate(-8px, 8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.animate-growth-arrow {
+  animation: growth-arrow 600ms 500ms ease-out both;
+}
+
+@keyframes successStoryIn {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+  .animate-grow-bar,
+  .animate-grow-bar-delay-1,
+  .animate-grow-bar-delay-2,
+  .animate-grow-bar-delay-3 {
+    animation: none;
+  }
+  .animate-growth-arrow {
+    animation: none;
+  }
+  .animate-\[successStoryIn_300ms_ease-out\] {
+    animation: none;
+  }
+}

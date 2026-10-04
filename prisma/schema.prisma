@@ -1,0 +1,75 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+
+model Lead {
+  id           Int      @id @default(autoincrement())
+  name         String
+  email        String
+  whatsapp     String
+  profession   String
+  heardAboutUs String?
+  referrerId   Int?
+  createdAt  DateTime @default(now())
+
+  referrer Referrer? @relation(fields: [referrerId], references: [id])
+}
+
+model Referrer {
+  id        Int           @id @default(autoincrement())
+  name      String
+  email     String        @unique
+  phone     String?
+  code      String        @unique
+  isActive  Boolean       @default(true)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  applications Application[]
+  contacts Contact[]
+  leads Lead[]
+}
+
+model Application {
+  id                Int       @id @default(autoincrement())
+  name              String
+  email             String
+  whatsapp          String
+  city              String
+  profession        String
+  organisation      String?
+  experience        String?
+  programme         String
+  motivation        String?
+  goals             String?
+  heardAboutUs      String?
+  referrerId        Int?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  referrer Referrer? @relation(fields: [referrerId], references: [id])
+}
+
+model Contact {
+  id          Int       @id @default(autoincrement())
+  name        String
+  email       String
+  whatsapp    String
+  message     String
+  referrerId  Int?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  referrer Referrer? @relation(fields: [referrerId], references: [id])
+}
