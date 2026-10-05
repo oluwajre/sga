@@ -4,13 +4,14 @@ export default function EmailHeader({
   label,
   heading,
   subheading,
-  logoUrl = "https://your-domain.com/images/logos/sga-logo.png",
+  logoUrl = "https://novance.com.ng/images/logos/sga-logo-white.png",
 }) {
   return (
     <Section
       style={{
         backgroundColor: "#0A192F",
         padding: "36px 40px",
+        borderRadius: "8px 8px 0 0",
       }}
     >
       <Img

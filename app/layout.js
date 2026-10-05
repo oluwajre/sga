@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import QuickActions from "@/components/layout/QucickActions";
 import ReferralTracker from "@/components/referral/ReferralTracker";
 import { Suspense } from "react";
+import { Analytics } from "@vercel/analytics/next";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -44,6 +45,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         <QuickActions />
+        <Analytics />
       </body>
     </html>
   );

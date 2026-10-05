@@ -12,7 +12,7 @@ export default function EmailLayout({ children }) {
           backgroundColor: "#F8FAFC",
           fontFamily: "Arial, sans-serif",
           margin: 0,
-          padding: "40px 20px",
+          padding: "20px 10px",
         }}
       >
         <Container
@@ -21,7 +21,7 @@ export default function EmailLayout({ children }) {
             borderRadius: "8px",
             margin: "0 auto",
             maxWidth: "600px",
-            padding: "40px",
+            padding: "10px",
           }}
         >
           {children}

@@ -9,14 +9,16 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block">
-              <Image
-                src="/images/logos/sga-logo-white.png"
-                alt="School Growth Academy"
-                width={220}
-                height={60}
-                loading="eager"
-                className="h-15 w-auto"
-              />
+              <div className="relative h-13.5 w-44 md:h-16.5 md:w-56">
+                <Image
+                  src="/images/logos/sga-logo-white.png"
+                  alt="School Growth Academy"
+                  fill
+                  loading="lazy"
+                  sizes="(min-width: 768px) 224px, 176px"
+                  className="object-contain object-left"
+                />
+              </div>
             </Link>
 
             <p className="mt-5 font-sga-body text-sm leading-relaxed text-slate-300">

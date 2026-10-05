@@ -97,7 +97,7 @@ export default function ApplicationConfirmationEmail({
       </Text>
 
       <Button
-        href="https://your-domain.com/programmes"
+        href="https://novance.com.ng/programmes"
         style={{
           display: "inline-block",
           marginTop: "28px",
