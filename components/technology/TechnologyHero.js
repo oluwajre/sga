@@ -13,14 +13,18 @@ export default function TechnologyHero() {
             </p>
 
             <h1 className="mt-5 font-sga-heading text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl">
-              Technology That Helps Turn School Growth Strategy Into Action.
+              Technology That Turns School Growth Strategy into Action
             </h1>
 
             <p className="mt-6 max-w-xl font-sga-body text-lg leading-relaxed text-slate-300 md:text-xl">
-              SGA combines data, digital learning, and practical productivity
-              tools to help school growth professionals understand performance,
-              support better decisions, and deliver solutions more effectively.
+              At School Growth Academy (SGA), technology is not taught for
+              technology’s sake. We combine data, AI, digital learning, and
+              practical productivity tools to help School Growth Mentors and
+              Educational Business Consultants understand school performance,
+              make better decisions, deliver practical solutions, and create
+              measurable growth.
             </p>
+
           </div>
 
           {/* Technology Visual */}

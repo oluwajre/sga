@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { UsersIcon, ArrowUpIcon, ReportIcon } from "../common/Icons";
+import { journeyStages } from "../common/journeyStages";
 
 export default function Hero() {
   return (
@@ -23,34 +24,57 @@ export default function Hero() {
             {/* Badge */}
             <div className="mb-6 inline-flex max-w-full rounded-full border border-sga-emerald/30 bg-sga-emerald/10 px-4 py-2">
               <span className="font-sga-body text-[10px] font-semibold uppercase tracking-wide text-sga-emerald-light sm:text-sm">
-                Official Professional Certification & Mentorship Programme
+                Beyond Employment
               </span>
             </div>
 
             {/* Heading */}
             <h1 className="font-sga-heading text-4xl font-extrabold leading-[1.12] tracking-tight text-white sm:text-5xl">
-              Build a Lucrative School Growth Mentorship & Educational
-              Business Consulting Practice.
-              {/* <span className="mt-4 block text-sga-amber">
-                Help Private Schools Scale Enrolment, Revenue, and Impact.
-              </span> */}
+              Build a Career Helping Schools Grow—and Get Paid for Your Expertise
             </h1>
 
             {/* Description */}
             <p className="mt-6 max-w-2xl font-sga-body text-base leading-8 text-slate-300 sm:text-[16px]">
-              We train, certify, and equip ambitious African professionals,
-              educators, and consultants with the exact frameworks, tech tools,
-              and client-acquisition strategies needed to build a
-              recurring-income school growth practice.
+              Turn your knowledge, experience, and interest in education and business
+              growth into a professional career in School Growth Mentorship and
+              Educational Business Consulting. Learn practical frameworks, develop
+              your expertise, and build the skills to help schools attract learners,
+              improve performance, increase revenue, and achieve sustainable growth.
             </p>
+
+            {/* Journey Stages */}
+            <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-3">
+              {journeyStages.map((stage, index) => (
+                <div key={stage} className="flex items-center gap-3">
+                  <div className="flex items-center gap-2">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-sga-emerald/50 font-sga-body text-xs font-bold text-sga-emerald">
+                      {index + 1}
+                    </span>
+
+                    <span className="font-sga-body text-sm font-medium text-slate-200">
+                      {stage}
+                    </span>
+                  </div>
+
+                  {index < journeyStages.length - 1 && (
+                    <span
+                      aria-hidden="true"
+                      className="hidden text-sga-emerald sm:inline"
+                    >
+                      →
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
 
             {/* CTAs */}
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
               <Link
-                href="/apply"
+                href="/programmes#opportunity-discovery-day"
                 className="group inline-flex items-center justify-center gap-2 rounded-sga bg-sga-amber px-6 py-4 font-sga-body text-[14px] font-bold text-sga-navy transition-all duration-200 hover:-translate-y-1 hover:bg-sga-amber-dark hover:text-white focus:outline-none focus:ring-2 focus:ring-sga-amber focus:ring-offset-2 focus:ring-offset-sga-navy"
               >
-                Apply for Next Cohort
+                Explore Our Free Masterclass Programme
                 <ArrowUpIcon className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
 
@@ -62,15 +86,6 @@ export default function Hero() {
                 Download Free Opportunity Report
               </a>
             </div>
-
-            {/* Small supporting statement */}
-            {/* <div className="mt-8 flex items-center gap-3">
-              <span className="h-px w-10 bg-sga-emerald" />
-
-              <p className="font-sga-body text-sm text-slate-400">
-                Practical frameworks. Technology. Consulting opportunity.
-              </p>
-            </div> */}
           </div>
 
           {/* Visual content */}

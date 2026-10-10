@@ -35,32 +35,31 @@ export default function SolutionSection() {
           {/* Introduction */}
           <div>
             <p className="font-sga-body text-sm font-bold uppercase tracking-widest text-sga-emerald">
-              The SGA Opportunity
+              Your Opportunity
             </p>
 
             <h2 className="mt-3 font-sga-heading text-3xl font-extrabold tracking-tight text-sga-navy sm:text-4xl">
-              Fill the Gap as a Certified School Growth Mentor (CSGM)
+              Build a Sustainable Professional Practice
             </h2>
 
             <p className="mt-6 max-w-xl font-sga-body text-lg leading-8 text-sga-slate">
-              School owners do not need more academic theory; they urgently
-              require operational turnaround, structured revenue management,
-              and student enrolment systems.
+              Through a progressive professional pathway, NoVance equips ambitious African professionals, educators, 
+              school leaders, and aspiring consultants with school-growth expertise, proven consulting frameworks, 
+              AI-powered tools, client-acquisition strategies, and practical experience to help schools attract more 
+              learners, improve performance, increase revenue, and achieve sustainable growth.
             </p>
 
             <p className="mt-6 max-w-xl font-sga-body text-lg leading-8 text-sga-slate">
-              School Growth Academy bridges this gap by training you to step
-              into any private K-12 school as an indispensable growth partner.
-              You will diagnose institutional bottlenecks, execute operational
-              frameworks, and deploy modern digital software tools—building a
-              high-income advisory practice while elevating African education.
+              Develop the skills, confidence, credentials, tools, and practical experience to diagnose school-growth 
+              challenges, develop solutions, mentor school leaders, deliver measurable results, and build a sustainable 
+              consulting practice.
             </p>
 
             <a
               href="/apply"
               className="group mt-8 inline-flex items-center gap-2 rounded-sga bg-sga-amber px-7 py-4 font-sga-body text-base font-bold text-sga-navy transition-all duration-200 hover:-translate-y-1 hover:bg-sga-amber-dark hover:text-white focus:outline-none focus:ring-2 focus:ring-sga-amber focus:ring-offset-2"
             >
-              Become a Certified School Growth Mentor
+              Explore the Programme
               <span
                 aria-hidden="true"
                 className="transition-transform duration-200 group-hover:translate-x-1"

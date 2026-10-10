@@ -1,26 +1,26 @@
 export const howItWorksData = [
   {
     number: "01",
-    title: "Apply",
+    title: "Discover the Opportunity",
     description:
-      "Submit your application to join the next School Growth Academy cohort.",
+      "Start with the free Beyond Employment masterclass to explore a professional career in School Growth Mentorship and Educational Business Consulting.",
   },
   {
     number: "02",
-    title: "Learn",
+    title: "Develop Your Skills",
     description:
-      "Master practical school growth frameworks, consulting tools, and strategies for helping private schools improve enrolment, revenue, and operations.",
+      "Learn practical school-growth frameworks, mentorship methods, consulting skills, and technology-enabled strategies for helping schools grow.",
   },
   {
     number: "03",
-    title: "Get Certified",
+    title: "Practise & Get Certified",
     description:
-      "Complete your selected programme requirements and earn the relevant School Growth Academy certification.",
+      "Build practical experience through the relevant programme requirements and work towards the certification associated with your chosen pathway.",
   },
   {
     number: "04",
-    title: "Build & Grow",
+    title: "Build Your Practice",
     description:
-      "Apply your knowledge, acquire school clients, deliver growth solutions, and build a sustainable educational consulting practice.",
+      "Apply your expertise, develop client relationships, deliver school-growth solutions, and work towards building a sustainable professional practice.",
   },
 ];

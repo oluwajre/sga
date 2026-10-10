@@ -3,24 +3,32 @@ export const problems = [
     number: "01",
     title: "Enrolment Stagnation",
     reality:
-      "Over 80% of private schools suffer from falling student intake and bad local marketing",
+      "Weak marketing, limited market insight, and ineffective admissions processes can make it difficult for private schools to attract and retain students.",
+    opportunity:
+      "School Growth Professionals can help schools identify growth opportunities and build more effective marketing and enrolment strategies.",
   },
   {
     number: "02",
-    title: "Crippling Fee Default",
+    title: "Fee Collection & Revenue Gaps",
     reality:
-      "Uncollected tuition defaults drain operational cash flow and limit a school’s ability to improve and expand.",
+      "Uncollected fees and weak financial controls can strain cash flow, limit investment, and make sustainable school growth more difficult.",
+    opportunity:
+      "Professionals with the right financial and consulting skills can help schools strengthen revenue management and financial decision-making.",
   },
   {
     number: "03",
-    title: "Absent Operational Technology",
+    title: "Operational & Technology Gaps",
     reality:
-      "Outdated and manual administration creates unnecessary friction, slows decision-making, and increases proprietor burnout.",
+      "Manual processes, disconnected systems, and limited performance data can slow decisions and make school management unnecessarily difficult.",
+    opportunity:
+      "School Growth Mentors can help schools adopt practical processes, appropriate technology, and data-informed management practices.",
   },
   {
     number: "04",
-    title: "High Staff Turnover",
+    title: "Staff Performance & Retention",
     reality:
-      "Low teacher morale, unclear performance expectations, and unstructured payroll models contribute to continuous staff attrition.",
+      "Unclear expectations, weak performance systems, and limited staff development can affect morale, consistency, and the quality of school operations.",
+    opportunity:
+      "Educational Business Consultants can help school leaders improve performance management, staff development, and organisational effectiveness.",
   },
 ];

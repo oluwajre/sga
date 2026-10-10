@@ -4,24 +4,24 @@ import { AnalyticsIcon, LearningIcon, ToolsIcon } from "../common/Icons";
 const technologies = [
   {
     name: "EdMetrics AI Integration",
-    category: "Educational Analytics",
+    category: "Planned AI & Analytics",
     icon: <AnalyticsIcon className="h-6 w-6 text-sga-emerald transition-transform duration-300 group-hover:scale-105" />,
     description:
-      "An automated school performance, student retention, and learning analytics engine that helps school leadership monitor results and make informed operational decisions.",
+      "A planned AI-powered school performance and analytics solution designed to help school leaders interpret data, identify improvement opportunities, and make more informed decisions.",
   },
   {
     name: "LearnNova Deployment",
-    category: "E-Learning & CBT",
+    category: "Digital Learning & CBT",
     icon: <LearningIcon className="h-6 w-6 text-sga-emerald transition-transform duration-300 group-hover:scale-105" />,
     description:
-      "A low-bandwidth, offline-first digital learning and Computer-Based Testing platform designed for African school environments where reliable internet connectivity cannot always be assumed.",
+      "Deploy LearnNova's digital learning and Computer-Based Testing tools to support teaching, assessments, and learning in African school environments, including settings with limited internet connectivity.",
   },
   {
     name: "Mentorship & Consulting Toolkit",
-    category: "Consulting Tools",
+    category: "Practical Consulting Tools",
     icon: <ToolsIcon className="h-6 w-6 text-sga-emerald transition-transform duration-300 group-hover:scale-105" />,
     description:
-      "A practical collection of spreadsheets, diagnostic audit templates, enrolment tools, pitch decks, and consulting resources that help graduates deliver structured client engagements.",
+      "Use practical consulting resources, diagnostic templates, enrolment-planning tools, and other materials to structure school assessments, develop recommendations, and support client engagements.",
   },
 ];
 
@@ -36,13 +36,15 @@ export default function TechnologySection() {
           </p>
 
           <h2 className="mt-3 font-sga-heading text-3xl font-extrabold tracking-tight text-sga-navy sm:text-4xl">
-            Technology That Turns Consulting Strategy Into Execution
+            Technology That Turns School Growth Strategy into Action
           </h2>
 
           <p className="mt-5 font-sga-body text-lg leading-8 text-sga-slate">
-            SGA graduates do not just learn frameworks. They gain practical
-            technology and productivity tools that help turn recommendations
-            into measurable school improvements.
+            At SGA, technology is not for its own sake. We combine school
+            performance data, AI-powered insights, digital learning, and practical
+            productivity tools to help School Growth Mentors and Educational
+            Business Consultants understand challenges, make informed decisions,
+            implement solutions, and support measurable school growth.
           </p>
         </div>
 

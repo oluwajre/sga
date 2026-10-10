@@ -1,38 +1,4 @@
-const programmes = [
-  {
-    level: "Tier 1",
-    title: "Certified School Growth Mentor (CSGM)",
-    bestFor:
-      "Professionals who want to build practical school growth mentorship and consulting capabilities.",
-    duration: "10 Days",
-    investment: "₦250,000",
-    certification: "CSGM",
-    practical: "Supervised School Audit",
-    focus: "Diagnostics, Audits, Growth Turnaround & Retainers",
-  },
-  {
-    level: "Tier 2",
-    title: "Certified Educational Business Consultant (CEBC)",
-    bestFor:
-      "Professionals ready to advise school owners and leadership teams on strategy, business growth, and scaling.",
-    duration: "12 Days",
-    investment: "₦350,000",
-    certification: "CEBC",
-    practical: "Board Pitch Deck",
-    focus: "Board Advisory, Enterprise Strategy & Scaling",
-  },
-  {
-    level: "Tier 3",
-    title: "Masterclass Fellow",
-    bestFor:
-      "Professionals ready to develop advanced strategic capabilities for complex education businesses and expansion.",
-    duration: "15 Days",
-    investment: "₦500,000",
-    certification: "Masterclass Fellow",
-    practical: "Hub Practicum",
-    focus: "M&A, Valuation & Education Hubs",
-  },
-];
+import { programmeData } from "./programmeData";
 
 export default function ProgrammeComparison() {
   return (
@@ -43,99 +9,164 @@ export default function ProgrammeComparison() {
             Compare the Pathways
           </p>
 
-          <h2 className="font-sga-heading text-3xl font-extrabold leading-tight text-sga-navy md:text-4xl">
-            Choose the Programme That Matches Your Next Step
+          <h2 className="font-sga-heading text-3xl font-extrabold leading-tight text-sga-navy md:text-4xl lg:text-5xl">
+            Find the Right Next Step for Your Journey
           </h2>
 
           <p className="mt-5 font-sga-body text-lg leading-relaxed text-sga-slate">
-            Each pathway builds a different level of capability, from practical
-            school growth mentorship to advanced education-business strategy.
+            Start by discovering the opportunity, develop practical school
+            growth skills, explore professional consulting, or take a
+            technology-focused pathway with EdMetrics AI Stacks.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          {programmes.map((programme) => (
-            <div
+        <div className="mt-12 grid items-stretch gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          {programmeData.map((programme) => (
+            <article
               key={programme.level}
-              className="flex flex-col rounded-sga border border-slate-200 bg-sga-off-white p-7 transition-shadow duration-300 hover:shadow-[0_4px_20px_-2px_rgba(10,25,47,0.08)] md:p-8"
+              className={`group relative flex min-w-0 flex-col overflow-hidden rounded-sga border p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl md:p-7 ${
+                programme.featured
+                  ? "border-sga-emerald bg-sga-navy text-white shadow-lg shadow-sga-navy/10"
+                  : "border-slate-200 bg-sga-off-white hover:border-sga-emerald/40"
+              }`}
             >
-              <div>
-                <span className="font-sga-body text-sm font-bold uppercase tracking-widest text-sga-emerald">
-                  {programme.level}
-                </span>
+              {programme.featured && (
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -right-12 -top-12 h-36 w-36 rounded-full border border-sga-emerald/20"
+                />
+              )}
 
-                <h3 className="mt-4 font-sga-heading text-2xl font-bold leading-tight text-sga-navy">
+              <div className="relative">
+                <div className="flex items-center justify-between gap-3">
+                  <span
+                    className={`font-sga-body text-xs font-bold uppercase tracking-[0.18em] ${
+                      programme.featured
+                        ? "text-emerald-300"
+                        : "text-sga-emerald"
+                    }`}
+                  >
+                    {programme.level}
+                  </span>
+
+                  <span
+                    className={`rounded-full px-2.5 py-1 font-sga-body text-[10px] font-bold uppercase tracking-wider ${
+                      programme.featured
+                        ? "bg-sga-emerald/15 text-emerald-300"
+                        : "bg-white text-sga-slate"
+                    }`}
+                  >
+                    {programme.subtitle}
+                  </span>
+                </div>
+
+                <h3
+                  className={`mt-5 font-sga-heading text-xl font-extrabold leading-snug ${
+                    programme.featured ? "text-white" : "text-sga-navy"
+                  }`}
+                >
                   {programme.title}
                 </h3>
 
-                <p className="mt-4 font-sga-body text-base leading-relaxed text-sga-slate">
+                <p
+                  className={`mt-4 font-sga-body text-sm leading-relaxed ${
+                    programme.featured ? "text-slate-300" : "text-sga-slate"
+                  }`}
+                >
                   {programme.bestFor}
                 </p>
               </div>
 
-              <div className="mt-7 overflow-hidden rounded-sga border border-slate-200 bg-white">
-                <div className="grid grid-cols-2 divide-x divide-y divide-slate-200">
-                  <div className="px-4 py-4">
-                    <p className="font-sga-body text-xs font-semibold uppercase tracking-wide text-sga-slate">
-                      Duration
-                    </p>
+              <div
+                className={`mt-7 rounded-sga border p-4 ${
+                  programme.featured
+                    ? "border-white/10 bg-white/5"
+                    : "border-slate-200 bg-white"
+                }`}
+              >
+                <p
+                  className={`font-sga-body text-xs font-semibold uppercase tracking-wider ${
+                    programme.featured ? "text-slate-400" : "text-sga-slate"
+                  }`}
+                >
+                  Investment
+                </p>
 
-                    <p className="mt-1 font-sga-heading text-sm font-bold text-sga-navy">
-                      {programme.duration}
-                    </p>
-                  </div>
+                <p
+                  className={`mt-1 font-sga-heading text-2xl font-extrabold ${
+                    programme.featured ? "text-white" : "text-sga-navy"
+                  }`}
+                >
+                  {programme.investment}
+                </p>
 
-                  <div className="px-4 py-4">
-                    <p className="font-sga-body text-xs font-semibold uppercase tracking-wide text-sga-slate">
-                      Investment
-                    </p>
+                <div
+                  className={`my-4 border-t ${
+                    programme.featured ? "border-white/10" : "border-slate-200"
+                  }`}
+                />
 
-                    <p className="mt-1 font-sga-heading text-sm font-bold text-sga-navy">
-                      {programme.investment}
-                    </p>
-                  </div>
+                <p
+                  className={`font-sga-body text-xs font-semibold uppercase tracking-wider ${
+                    programme.featured ? "text-slate-400" : "text-sga-slate"
+                  }`}
+                >
+                  Format / Duration
+                </p>
 
-                  <div className="px-4 py-4">
-                    <p className="font-sga-body text-xs font-semibold uppercase tracking-wide text-sga-slate">
-                      Certification
-                    </p>
-
-                    <p className="mt-1 font-sga-heading text-sm font-bold text-sga-navy">
-                      {programme.certification}
-                    </p>
-                  </div>
-
-                  <div className="px-4 py-4">
-                    <p className="font-sga-body text-xs font-semibold uppercase tracking-wide text-sga-slate">
-                      Practical
-                    </p>
-
-                    <p className="mt-1 font-sga-heading text-sm font-bold text-sga-navy">
-                      {programme.practical}
-                    </p>
-                  </div>
-                </div>
+                <p
+                  className={`mt-1 font-sga-heading text-sm font-bold ${
+                    programme.featured ? "text-white" : "text-sga-navy"
+                  }`}
+                >
+                  {programme.duration}
+                </p>
               </div>
 
-              <div className="mt-6 border-t border-slate-200 pt-6">
-                <p className="font-sga-body text-xs font-bold uppercase tracking-wide text-sga-slate">
+              <div className="mt-6 flex-1">
+                <p
+                  className={`font-sga-body text-xs font-bold uppercase tracking-wider ${
+                    programme.featured ? "text-emerald-300" : "text-sga-emerald"
+                  }`}
+                >
                   Core Focus
                 </p>
 
-                <p className="mt-2 font-sga-body text-base font-semibold leading-relaxed text-sga-navy">
+                <p
+                  className={`mt-3 font-sga-body text-sm font-medium leading-relaxed ${
+                    programme.featured ? "text-slate-200" : "text-sga-navy"
+                  }`}
+                >
                   {programme.focus}
                 </p>
               </div>
 
-              <a
-                href="/apply"
-                className="mt-8 inline-flex items-center justify-center rounded-sga border-2 border-sga-navy px-5 py-3 font-sga-body text-sm font-bold text-sga-navy transition-all hover:-translate-y-0.5 hover:bg-sga-navy hover:text-white"
+              <div
+                className={`mt-7 border-t pt-6 ${
+                  programme.featured ? "border-white/10" : "border-slate-200"
+                }`}
               >
-                Apply for This Programme
-              </a>
-            </div>
+                <a
+                  href="/apply"
+                  className={`inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-sga px-4 py-3 text-center font-sga-body text-sm font-bold transition-all ${
+                    programme.featured
+                      ? "bg-sga-amber text-sga-navy hover:-translate-y-0.5 hover:bg-sga-amber-dark hover:text-white"
+                      : "border-2 border-sga-navy text-sga-navy hover:-translate-y-0.5 hover:bg-sga-navy hover:text-white"
+                  }`}
+                >
+                  {programme.action}
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
           ))}
         </div>
+
+        <p className="mt-6 text-center font-sga-body text-xs leading-relaxed text-sga-slate">
+          EdMetrics AI Stacks duration and specific programme deliverables are
+          to be confirmed. Review the individual pathway details before
+          registering.
+        </p>
       </div>
     </section>
   );

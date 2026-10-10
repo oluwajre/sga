@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { EmailIcon, PhoneIcon, WhatsAppIcon } from "../common/Icons";
 
 const phoneNumbers = [
@@ -116,10 +115,10 @@ export default function ContactOptions() {
 
             <div className="mt-5">
               <a
-                href="mailto:oluwajre2412@gmail.com"
+                href="mailto:support@novance.com.ng"
                 className="break-all font-sga-body text-sm font-semibold text-sga-navy transition-colors hover:text-sga-emerald"
               >
-                oluwajre2412@gmail.com
+                support@novance.com.ng
               </a>
             </div>
           </div>
