@@ -29,7 +29,11 @@ export default function GrowthChart() {
   }, []);
 
   return (
-    <div ref={chartRef} className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-2">
+    <div
+        ref={chartRef}
+        aria-label="Illustration of school performance improving over time"
+        className="p-2"
+      >
       <div className="flex items-end justify-between gap-3">
         <div className="flex h-32 flex-1 items-end gap-2">
           <div
@@ -84,11 +88,11 @@ export default function GrowthChart() {
 
       <div className="mt-4 flex items-center justify-between">
         <span className="font-sga-body text-xs font-medium text-slate-400">
-          School Performance
+          Growth Journey
         </span>
 
         <span className="font-sga-body text-xs font-bold text-sga-emerald-light">
-          Growth in Action
+          Illustrative Progress
         </span>
       </div>
     </div>

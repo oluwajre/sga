@@ -12,13 +12,14 @@ export default function HowItWorksSection() {
           </p>
 
           <h2 className="font-sga-heading text-3xl font-extrabold leading-tight text-sga-navy md:text-4xl">
-            From Learning to Building a Profitable Consulting Practice
+            Learn, Practise, Get Certified, and Build Your Practice
           </h2>
 
           <p className="mt-5 font-sga-body text-lg leading-relaxed text-sga-slate">
-            Follow a practical pathway designed to equip you with the
-            knowledge, tools, certification, and confidence to help schools
-            grow.
+            Follow a practical pathway from discovering the opportunity to
+            developing school-growth expertise, gaining practical experience,
+            earning relevant professional certification, and building your
+            educational consulting practice.
           </p>
 
             <div

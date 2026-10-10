@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { applicationSchema } from "./applicationSchema";
 import { useEffect, useRef, useState } from "react";
+import { programmeData } from "../programmes/programmeData";
 
 export default function ApplicationForm() {
   const [isSuccess, setIsSuccess] = useState(false);
@@ -422,15 +423,12 @@ function handleBack() {
                     className="mt-2 w-full rounded-sga border border-slate-300 bg-white px-4 py-3 font-sga-body text-sm outline-none transition focus:border-sga-emerald focus:ring-2 focus:ring-sga-emerald/20"
                   >
                     <option value="">Select a programme</option>
-                    <option value="School Growth Mentorship">
-                      Level 1 — School Growth Mentorship
-                    </option>
-                    <option value="Educational Business Consulting">
-                      Level 2 — Educational Business Consulting
-                    </option>
-                    <option value="Executive Masterclass">
-                      Level 3 — Executive Masterclass
-                    </option>
+
+                    {programmeData.map((programme, index) => (
+                      <option key={programme.level} value={programme.title}>
+                        {programme.level} — {programme.title} - {programme.investment}
+                      </option>
+                    ))}
                   </select>
 
                   {errors.programme && (

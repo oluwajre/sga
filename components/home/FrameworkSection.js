@@ -54,9 +54,12 @@ export default function FrameworkSection() {
           </h2>
 
           <p className="mt-5 font-sga-body text-lg leading-8 text-slate-300">
-            A practical six-stage methodology for diagnosing school challenges,
-            evaluating performance, implementing growth systems, and guiding
-            measurable institutional improvement.
+            Learn a structured, practical approach to helping schools grow.
+            The SGA framework guides School Growth Mentors and Educational
+            Business Consultants from diagnosing school challenges and
+            evaluating performance to developing strategies, implementing
+            solutions, establishing accountability, and supporting continuous
+            improvement.
           </p>
 
           <div
